@@ -9,10 +9,15 @@ export const DesignHeader = props => {
         <View style={styles.customHeader}>
 
             <View style={styles.inHeader}>
-                <TouchableOpacity onPress={props.onBar}>
+
+               {props.onBar ? <TouchableOpacity onPress={props.onBar}>
                     <Icons name='bars' size={30} color={theme.APP_BG} />
-                </TouchableOpacity>
+                </TouchableOpacity>: <TouchableOpacity onPress={props.onBack}>
+                    <Icons name='arrow-left' size={30} color={theme.APP_BG} />
+                </TouchableOpacity>} 
+                
                 <Text style={styles.inText}>{props.title}</Text>
+
                 <TouchableOpacity onPress={props.onBell}>
                     <Icons name='bell' size={30} color={theme.APP_BG} />
                 </TouchableOpacity>

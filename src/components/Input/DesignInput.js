@@ -17,12 +17,20 @@ export class DesignInput extends React.Component{
     render(){return (
         <View style={[styles.viewStyle, this.props.style]}>
 
-            <TextInput style={styles.inputStyle} placeholder={this.props.placeholder} secureTextEntry={this.state.toggle}></TextInput>
+            <TextInput style={[styles.inputStyle, this.props.inputStyle]} placeholder={this.props.placeholder} secureTextEntry={this.state.toggle}
+            onChangeText={this.props.onChangeText} value={this.props.value} {...this.props}></TextInput>
 
             {
                 this.props.eye &&
                 <TouchableOpacity style={styles.position} onPress={this.togglePass}>
                     <Icon  name="eye" size={25} color='#95989A' />
+                </TouchableOpacity>
+            }
+
+            {
+                this.props.drop &&
+                <TouchableOpacity style={styles.position} onPress={this.togglePass}>
+                    <Icon  name="angle-down" size={25} color='#95989A' />
                 </TouchableOpacity>
             }
 

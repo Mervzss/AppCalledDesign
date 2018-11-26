@@ -8,7 +8,7 @@ import AppDrawerStack from './src/Screens/MainAppStack/index'
 
 export default class App extends Component {
   render() {
-    return <Switchings/>
+    return <Switchings />
 }
 }
 

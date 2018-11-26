@@ -13,7 +13,10 @@ export const AnnListing = props =>{
         data={SampleData}
         renderItem={({item}) => (
             <View>
+                        <TouchableOpacity onPress={props.headPress(item)}>
                         <DesignText style={{ fontSize: 28 }}>{item.heading}</DesignText>
+                        </TouchableOpacity>
+                        
 
                         <View style={styles.lowerStyle}>
                             <View style={styles.lowerLink}>

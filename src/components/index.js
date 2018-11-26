@@ -5,6 +5,7 @@ export {DesignText} from './Text/DesignText'
 export {DesignHeader} from './Header/DesignHeader'
 export {DesignHeaderText} from './Header/DesignHeadText'
 export {AnnListing} from './AnnListing/AnnListing'
+export {SkillListing} from './skillListing/skillListing'
 
 
 //Logo

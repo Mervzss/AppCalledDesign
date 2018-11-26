@@ -7,6 +7,10 @@ import { DesignHeader, DesignText, DesignHeaderText, AnnListing } from '../../co
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 class AnnouncementView extends Component {
+    static contentOptions = {
+        title: 'Home Page',  
+        drawerLabel: 'Home',
+      }
     render() {
         return (
 
@@ -18,10 +22,12 @@ class AnnouncementView extends Component {
                     <View style={styles.annHeader}>
                     <DesignHeaderText title="Announcements" />
                     </View>
-                    
 
                     <View style={styles.mainContent}>
-                        <AnnListing />
+                        <AnnListing headPress={(value) => this.props.navigation.navigate.bind(this,'AnnDetails',{
+                            ...value,
+                            title:"Announcements"
+                            })}/>
                     </View>
 
 

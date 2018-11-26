@@ -5,7 +5,18 @@ import theme from '../../../theme/Default_Theme/appColors'
 
 import { DesignButton, DesignInput, DesignLink, DesignText, AirBNB, Yondu } from '../../components'
 
+
 class UseerLoginView extends Component {
+    state={
+        changeMe:''
+    }
+
+    updateText = (val) =>{
+        this.setState({
+            changeMe: val
+        })
+    }
+
     render() {
         return (
             <View style={styles.headContainer}>
@@ -20,7 +31,11 @@ class UseerLoginView extends Component {
                         <DesignText>User Login</DesignText>
 
                         <View style={styles.mainInputs}>
-                            <DesignInput style={styles.inputStyle} placeholder={"Username"} />
+                        
+                            <DesignInput style={styles.inputStyle} placeholder={"Username"} 
+                            onChangeText={value => this.updateText(value)} 
+                            value={this.state.changeMe}/>
+
                             <DesignInput style={styles.inputStyle} placeholder={"Password"} eye={true} />
                         </View>
 

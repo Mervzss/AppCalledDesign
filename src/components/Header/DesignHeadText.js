@@ -5,7 +5,7 @@ import { DesignText } from '../index'
 export const DesignHeaderText = props => {
     return (
         <View style={styles.upperText}>
-            <DesignText>{props.title}</DesignText>
+            <DesignText style={props.style}>{props.title}</DesignText>
         </View>
     )
 }
